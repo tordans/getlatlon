@@ -183,6 +183,9 @@
   </script>
 
   <style type="text/css">
+    body {
+      padding: 5px;
+    }
     td {
       color:#ccc;
       font-size:10px;
@@ -199,47 +202,43 @@
   </style>
 </head>
 <body>
-<div style="width:100%; margin:auto;margin-top:20px;">
+  <div class="input-append">
+    <input type="text" id="location" class="span5" placeholder="Enter a location anywhere in the world" /><input type="button" class="btn btn-info" value="drop marker here" onclick="dropMarker()" />
+  </div>
 
-    <div class="input-append">
-      <input type="text" id="location" class="span5" placeholder="Enter a location anywhere in the world" /><input type="button" class="btn btn-info" value="drop marker here" onclick="dropMarker()" />
-    </div>
+  <div id="map_canvas" style="width:100%;height:400px;"></div>
 
-    <div id="map_canvas" style="width:100%;height:400px;"></div>
-
-    <table>
+  <table>
+    <tr>
+        <td>Zoom Level</td>
+        <!-- <td>Latitude</td> -->
+        <!-- <td>Longitude</td> -->
+        <td>Latitude, Longitude</td>
+        <!-- <td>Longitude, Latitude</td> -->
+        <!-- <td>Latitude, Longitude (tabbed)</td> -->
+        <!-- <td>Longitude, Latitude (tabbed)</td> -->
+      </tr>
       <tr>
-          <td>Zoom Level</td>
-          <!-- <td>Latitude</td> -->
-          <!-- <td>Longitude</td> -->
-          <td>Latitude, Longitude</td>
-          <!-- <td>Longitude, Latitude</td> -->
-          <!-- <td>Latitude, Longitude (tabbed)</td> -->
-          <!-- <td>Longitude, Latitude (tabbed)</td> -->
-        </tr>
-        <tr>
-          <td><input class="span1" id="zl" type="text" value="zoom level" size="6"/></td>
-          <!-- <td><input id="lat" type="text" value="latitude"/></td> -->
-          <!-- <td><input id="lng" type="text" value="longitude" /></td> -->
-          <td><input class="span3" id="latlng" type="text" value="latitude, longitude" size="40" /></td>
-          <!-- <td><input class="span3" id="lnglat" type="text" value="longitude, latitude" size="40" /></td> -->
-          <!-- <td><input class="span3" id="latlngtab" type="text" value="lat lng tabbed" size="40" /></td> -->
-          <!-- <td><input class="span3" id="lnglattab" type="text" value="lng lat tabbed" size="40" /></td> -->
-        </tr>
-    </table>
+        <td><input class="span1" id="zl" type="text" value="zoom level" size="6"/></td>
+        <!-- <td><input id="lat" type="text" value="latitude"/></td> -->
+        <!-- <td><input id="lng" type="text" value="longitude" /></td> -->
+        <td><input class="span3" id="latlng" type="text" value="latitude, longitude" size="40" /></td>
+        <!-- <td><input class="span3" id="lnglat" type="text" value="longitude, latitude" size="40" /></td> -->
+        <!-- <td><input class="span3" id="latlngtab" type="text" value="lat lng tabbed" size="40" /></td> -->
+        <!-- <td><input class="span3" id="lnglattab" type="text" value="lng lat tabbed" size="40" /></td> -->
+      </tr>
+  </table>
 
-</div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-68514714-1', 'auto');
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
-</script>
+    ga('create', 'UA-68514714-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
 
 </body>
 </html>
