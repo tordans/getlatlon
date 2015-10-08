@@ -126,11 +126,11 @@
       $('#lat').val(lat);
       $('#lng').val(lng);
       $('#latlng').val(lat + ',' + lng);
-      $('#lnglat').val(lng + ',' + lat);
-      $('#latlngtab').val(lat + ' ' + lng);
-      $('#lnglattab').val(lng + ' ' + lat);
-      $('#map_canvas').css('height',$(window).height()-150);
-      google.maps.event.trigger(map, "resize");
+      // $('#lnglat').val(lng + ',' + lat);
+      // $('#latlngtab').val(lat + ' ' + lng);
+      // $('#lnglattab').val(lng + ' ' + lat);
+      // $('#map_canvas').css('height',$(window).height()-150);
+      google.maps.event.trigger(map, 'resize');
     }
 
     var marker;
@@ -212,10 +212,10 @@
         <!-- <td>Longitude, Latitude (tabbed)</td> -->
       </tr>
       <tr>
-        <td><input class="span1" id="zl" type="text" value="zoom level" size="6"/></td>
-        <td><input id="lat" type="text" value="latitude"/></td>
-        <td><input id="lng" type="text" value="longitude" /></td>
-        <td><input class="span3" id="latlng" type="text" value="latitude, longitude" size="40" /></td>
+        <td><input data-behavior='copy-content' class='span2' id="zl" type="text" value="zoom level" size="6"/></td>
+        <td><input data-behavior='copy-content' class='span2' id="lat" type="text" value="latitude"/></td>
+        <td><input data-behavior='copy-content' class='span2' id="lng" type="text" value="longitude" /></td>
+        <td><input data-behavior='copy-content' class='span3' id="latlng" type="text" value="latitude, longitude" size="40" /></td>
         <!-- <td><input class="span3" id="lnglat" type="text" value="longitude, latitude" size="40" /></td> -->
         <!-- <td><input class="span3" id="latlngtab" type="text" value="lat lng tabbed" size="40" /></td> -->
         <!-- <td><input class="span3" id="lnglattab" type="text" value="lng lat tabbed" size="40" /></td> -->
@@ -249,6 +249,12 @@
         $('#map_canvas').css('height', get('map_height') + 'px');
       }
     }, 100);
+
+    // Select input content when clicking in input
+    $('[data-behavior~=copy-content]').click(function() {
+      this.focus();
+      this.select();
+    });
   </script>
 
 </body>
