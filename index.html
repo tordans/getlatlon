@@ -233,5 +233,23 @@
     ga('send', 'pageview');
   </script>
 
+  <script>
+    function get(name){
+      if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
+    }
+
+    // Set the canvas size via param map_width, map_height.
+    // No idea why the timeout is needed, but without it things dont resize.
+    setTimeout(function() {
+      if(get('map_width')) {
+        $('#map_canvas').css('width', get('map_width') + 'px');
+      }
+      if(get('map_height')) {
+        $('#map_canvas').css('height', get('map_height') + 'px');
+      }
+    }, 100);
+  </script>
+
 </body>
 </html>
