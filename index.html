@@ -201,25 +201,31 @@
 
   <div id="map_canvas" style="width:100%;height:400px;"></div>
 
-  <table>
+  <table style='width:100%;'>
     <tr>
-        <td>Zoom Level</td>
-        <td>Latitude</td>
-        <td>Longitude</td>
-        <td>Latitude, Longitude</td>
-        <!-- <td>Longitude, Latitude</td> -->
-        <!-- <td>Latitude, Longitude (tabbed)</td> -->
-        <!-- <td>Longitude, Latitude (tabbed)</td> -->
-      </tr>
-      <tr>
-        <td><input data-behavior='copy-content' class='span2' id="zl" type="text" value="zoom level" size="6"/></td>
-        <td><input data-behavior='copy-content' class='span2' id="lat" type="text" value="latitude"/></td>
-        <td><input data-behavior='copy-content' class='span2' id="lng" type="text" value="longitude" /></td>
-        <td><input data-behavior='copy-content' class='span3' id="latlng" type="text" value="latitude, longitude" size="40" /></td>
-        <!-- <td><input class="span3" id="lnglat" type="text" value="longitude, latitude" size="40" /></td> -->
-        <!-- <td><input class="span3" id="latlngtab" type="text" value="lat lng tabbed" size="40" /></td> -->
-        <!-- <td><input class="span3" id="lnglattab" type="text" value="lng lat tabbed" size="40" /></td> -->
-      </tr>
+      <td class='span2'>Zoom Level</td>
+      <td class='span2'>Latitude</td>
+      <td class='span2'>Longitude</td>
+      <td class='span3'>Latitude, Longitude</td>
+      <!-- <td>Longitude, Latitude</td> -->
+      <!-- <td>Latitude, Longitude (tabbed)</td> -->
+      <!-- <td>Longitude, Latitude (tabbed)</td> -->
+
+      <td></td>
+    </tr>
+    <tr>
+      <td><input data-behavior='copy-content' class='span2' id="zl" type="text" value="zoom level" size="6"/></td>
+      <td><input data-behavior='copy-content' class='span2' id="lat" type="text" value="latitude"/></td>
+      <td><input data-behavior='copy-content' class='span2' id="lng" type="text" value="longitude" /></td>
+      <td><input data-behavior='copy-content' class='span3' id="latlng" type="text" value="latitude, longitude" size="40" /></td>
+      <!-- <td><input class="span3" id="lnglat" type="text" value="longitude, latitude" size="40" /></td> -->
+      <!-- <td><input class="span3" id="latlngtab" type="text" value="lat lng tabbed" size="40" /></td> -->
+      <!-- <td><input class="span3" id="lnglattab" type="text" value="lng lat tabbed" size="40" /></td> -->
+
+      <td style='text-align: right;'>
+        <a href="https://github.com/tordans/getlatlon">Contribute on GitHub</a>
+      </td>
+    </tr>
   </table>
 
   <script>
